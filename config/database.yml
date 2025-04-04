@@ -1,0 +1,22 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: task_manager_development
+  username: postgres
+  password: franci2011 # Replace this with your actual password
+
+test:
+  <<: *default
+  database: task_manager_test
+  username: postgres
+  password: franci2011 # Replace this with your actual password
+
+production:
+  <<: *default
+  database: task_manager_production
+  username: task_manager
+  password: franci2011 # Replace this with your actual password
