@@ -6,17 +6,17 @@ default: &default
 development:
   <<: *default
   database: task_manager_development
-  username: postgres
-  password: franci2011 # Replace this with your actual password
+  username: <%= ENV["DB_USERNAME"] %>
+  password: <%= ENV["DB_PASSWORD"] %>
 
 test:
   <<: *default
   database: task_manager_test
-  username: postgres
-  password: franci2011 # Replace this with your actual password
+  username: <%= ENV["DB_USERNAME"] %>
+  password: <%= ENV["DB_PASSWORD"] %>
 
 production:
   <<: *default
   database: task_manager_production
-  username: task_manager
-  password: franci2011 # Replace this with your actual password
+  username: <%= ENV["DB_USERNAME"] %>
+  password: <%= ENV["DB_PASSWORD"] %>
