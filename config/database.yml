@@ -20,7 +20,10 @@ test:
   password: <%= ENV["DB_PASSWORD"] %>
 
 production:
-  <<: *default
-  database: task_manager_production
-  username: <%= ENV["DB_USERNAME"] %>
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: postgres
   password: <%= ENV["DB_PASSWORD"] %>
+  database: task_manager_production
+  host: /cloudsql/task-manager-mario-dev:us-central1:task-manager-db
