@@ -16,7 +16,7 @@ COPY . .
 
 # Precompile assets and migrate DB (optional for prod)
 # RUN bundle exec rake assets:precompile
-
+ENV RAILS_LOG_TO_STDOUT=true
 ENV RAILS_ENV=production
 
 # Expose port and start server
