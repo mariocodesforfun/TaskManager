@@ -60,3 +60,6 @@ build-iPhoneSimulator/
 .env
 /log/*
 !.keep
+
+/app/assets/builds/*
+!/app/assets/builds/.keep
