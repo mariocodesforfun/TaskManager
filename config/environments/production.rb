@@ -84,7 +84,8 @@ Rails.application.configure do
   #   /.*\.example\.com/ # Allow requests from subdomains like `www.example.com`
   # ]
   #
-  config.hosts << /.*\.us-central1\.run\.app/
+  config.hosts << "task-manager-890814784471.us-central1.run.app"
+
 
 
   # Skip DNS rebinding protection for the default health check endpoint.
