@@ -19,6 +19,9 @@ COPY . .
 ENV RAILS_LOG_TO_STDOUT=true
 ENV RAILS_ENV=production
 
+# Create socket dir for Cloud SQL
+RUN mkdir -p /cloudsql
+
 # Expose port and start server
 EXPOSE 8080
 CMD ["rails", "server", "-b", "0.0.0.0", "-p", "8080"]
