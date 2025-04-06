@@ -24,4 +24,4 @@ RUN mkdir -p /cloudsql
 
 # Expose port and start server
 EXPOSE 8080
-CMD ["rails", "server", "-b", "0.0.0.0", "-p", "8080"]
+CMD ["sh", "-c", "bundle exec rails server -b 0.0.0.0 -p ${PORT:-8080}"]
