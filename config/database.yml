@@ -26,4 +26,4 @@ production:
   username: postgres
   password: <%= ENV["DB_PASSWORD"] %>
   database: task_manager_production
-  host: <%= Rails.root.join("tmp/cloudsql/task-manager-mario-dev:us-central1:task-manager-db").to_s %>
+  host: /cloudsql/task-manager-mario-dev:us-central1:task-manager-db
