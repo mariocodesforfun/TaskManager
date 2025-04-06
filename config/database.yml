@@ -26,4 +26,4 @@ production:
   username: postgres
   password: <%= ENV["DB_PASSWORD"] %>
   database: task_manager_production
-  host: /cloudsql/task-manager-mario-dev:us-central1:task-manager-db
+  host: "/cloudsql/task-manager-mario-dev:us-central1:task-manager-db"
