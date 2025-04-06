@@ -304,6 +304,7 @@ Devise.setup do |config|
   # Note: These might become the new default in future versions of Devise.
   config.responder.error_status = :unprocessable_entity
   config.responder.redirect_status = :see_other
+  config.secret_key = Rails.application.credentials.secret_key_base
 
   # ==> Configuration for :registerable
 
