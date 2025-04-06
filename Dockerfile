@@ -17,6 +17,8 @@ COPY . .
 # Precompile assets and migrate DB (optional for prod)
 # RUN bundle exec rake assets:precompile
 
+ENV RAILS_ENV=production
+
 # Expose port and start server
 EXPOSE 8080
 CMD ["rails", "server", "-b", "0.0.0.0", "-p", "8080"]
