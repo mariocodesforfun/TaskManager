@@ -6,7 +6,13 @@ default: &default
 
 development:
   <<: *default
-  url: <%= ENV['DATABASE_URL'] %>
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  username: postgres
+  password: <%= ENV["DB_PASSWORD"] %>
+  database: task_manager_production
+  host: <%= "#{ENV['HOME']}/cloudsql/task-manager-mario-dev:us-central1:task-manager-db" %>
 
 
 test:
