@@ -1,0 +1,14 @@
+<%= form_with model: @task do |form| %>
+    <div>
+      <%= form.label :title %>
+      <%= form.text_field :title %>
+    </div>
+    <div>
+      <%= form.label :description, style: "display: block" %>
+      <%= form.text_area :description %>
+    </div>
+    <div>
+      <%= form.submit %>
+    </div>
+  <% end %>
+  
